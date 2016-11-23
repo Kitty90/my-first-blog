@@ -6,10 +6,13 @@
         <div>
             <h1><a href="www.wtfshouldidowithmylife.com">Dear Nerd diary,</a></h1>
         </div>
-
+      {% for post in posts %}
         <div>
-            <p> Hi there Mr Nerdy Boyfriend. This is your humble studentess speaking</p>
-            <p><em>Does this mean I'm writing <em>HTML</em>??? :O</p>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+      {% endfor %}
+
     </body>
 </html>
